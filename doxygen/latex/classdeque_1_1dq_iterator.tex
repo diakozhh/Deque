@@ -1,0 +1,133 @@
+\hypertarget{classdeque_1_1dq_iterator}{}\doxysection{deque\texorpdfstring{$<$}{<} elem\+Type \texorpdfstring{$>$}{>}\+::dq\+Iterator Class Reference}
+\label{classdeque_1_1dq_iterator}\index{deque$<$ elemType $>$::dqIterator@{deque$<$ elemType $>$::dqIterator}}
+
+
+Deque iterator.  
+
+
+
+
+{\ttfamily \#include $<$deque.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdeque_1_1dq_iterator_a1a1e7199ba978ac05147c1e85c3a6542}{dq\+Iterator}} (const \mbox{\hyperlink{classdeque}{deque}} \&d)
+\item 
+\mbox{\hyperlink{classdeque_1_1dq_iterator_a110f5e34559cf1cb3ac6ff72d14111af}{dq\+Iterator}} (elem $\ast$e)
+\item 
+void \mbox{\hyperlink{classdeque_1_1dq_iterator_abdcbb1f945d3c4fe012808d04d169a07}{dq\+Next}} ()
+\item 
+void \mbox{\hyperlink{classdeque_1_1dq_iterator_aea0b4e1838f41bdcb9c43a108bcecac8}{dq\+Prev}} ()
+\item 
+\mbox{\hyperlink{classdeque_1_1dq_iterator}{dq\+Iterator}} \& \mbox{\hyperlink{classdeque_1_1dq_iterator_a9f5ff14b4ed381c52545e4d04e59dd9f}{operator=}} (const \mbox{\hyperlink{classdeque_1_1dq_iterator}{dq\+Iterator}} \&d)
+\item 
+bool \mbox{\hyperlink{classdeque_1_1dq_iterator_a22ca517e80f38f179bb85973682ca3d1}{operator==}} (const \mbox{\hyperlink{classdeque_1_1dq_iterator}{dq\+Iterator}} \&d)
+\item 
+bool \mbox{\hyperlink{classdeque_1_1dq_iterator_ace8e8bd2b7b25fbf09ba1b6ddef64e98}{operator!=}} (const \mbox{\hyperlink{classdeque_1_1dq_iterator}{dq\+Iterator}} \&d)
+\item 
+elem\+Type \& \mbox{\hyperlink{classdeque_1_1dq_iterator_a1739e506c14b079ab5abe91afa804f48}{get\+Elem}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class elem\+Type$>$\newline
+class deque$<$ elem\+Type $>$\+::dq\+Iterator}
+Deque iterator. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdeque_1_1dq_iterator_a1a1e7199ba978ac05147c1e85c3a6542}\label{classdeque_1_1dq_iterator_a1a1e7199ba978ac05147c1e85c3a6542}} 
+\index{deque$<$ elemType $>$::dqIterator@{deque$<$ elemType $>$::dqIterator}!dqIterator@{dqIterator}}
+\index{dqIterator@{dqIterator}!deque$<$ elemType $>$::dqIterator@{deque$<$ elemType $>$::dqIterator}}
+\doxysubsubsection{\texorpdfstring{dqIterator()}{dqIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+\mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Iterator\+::dq\+Iterator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdeque}{deque}} \&}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Deque head constructor 
+\begin{DoxyParams}{Parameters}
+{\em d} & is deque const reference to create iterator \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdeque_1_1dq_iterator_a110f5e34559cf1cb3ac6ff72d14111af}\label{classdeque_1_1dq_iterator_a110f5e34559cf1cb3ac6ff72d14111af}} 
+\index{deque$<$ elemType $>$::dqIterator@{deque$<$ elemType $>$::dqIterator}!dqIterator@{dqIterator}}
+\index{dqIterator@{dqIterator}!deque$<$ elemType $>$::dqIterator@{deque$<$ elemType $>$::dqIterator}}
+\doxysubsubsection{\texorpdfstring{dqIterator()}{dqIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+\mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Iterator\+::dq\+Iterator (\begin{DoxyParamCaption}\item[{elem $\ast$}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Element constructor 
+\begin{DoxyParams}{Parameters}
+{\em e} & is element pointer to iterator \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdeque_1_1dq_iterator_abdcbb1f945d3c4fe012808d04d169a07}\label{classdeque_1_1dq_iterator_abdcbb1f945d3c4fe012808d04d169a07}} 
+\index{deque$<$ elemType $>$::dqIterator@{deque$<$ elemType $>$::dqIterator}!dqNext@{dqNext}}
+\index{dqNext@{dqNext}!deque$<$ elemType $>$::dqIterator@{deque$<$ elemType $>$::dqIterator}}
+\doxysubsubsection{\texorpdfstring{dqNext()}{dqNext()}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+void \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Iterator\+::dq\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Shift iterator to next element \begin{DoxyWarning}{Warning}
+iterator \textquotesingle{}nullptr\textquotesingle{} pointer 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classdeque_1_1dq_iterator_aea0b4e1838f41bdcb9c43a108bcecac8}\label{classdeque_1_1dq_iterator_aea0b4e1838f41bdcb9c43a108bcecac8}} 
+\index{deque$<$ elemType $>$::dqIterator@{deque$<$ elemType $>$::dqIterator}!dqPrev@{dqPrev}}
+\index{dqPrev@{dqPrev}!deque$<$ elemType $>$::dqIterator@{deque$<$ elemType $>$::dqIterator}}
+\doxysubsubsection{\texorpdfstring{dqPrev()}{dqPrev()}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+void \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Iterator\+::dq\+Prev (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Shift iterator to prev element \begin{DoxyWarning}{Warning}
+iterator \textquotesingle{}nullptr\textquotesingle{} pointer 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classdeque_1_1dq_iterator_a1739e506c14b079ab5abe91afa804f48}\label{classdeque_1_1dq_iterator_a1739e506c14b079ab5abe91afa804f48}} 
+\index{deque$<$ elemType $>$::dqIterator@{deque$<$ elemType $>$::dqIterator}!getElem@{getElem}}
+\index{getElem@{getElem}!deque$<$ elemType $>$::dqIterator@{deque$<$ elemType $>$::dqIterator}}
+\doxysubsubsection{\texorpdfstring{getElem()}{getElem()}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+elem\+Type \& \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Iterator\+::get\+Elem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get value of deque iterator\textquotesingle{}s element @warniing \textquotesingle{}nullptr\textquotesingle{} iterator \mbox{\Hypertarget{classdeque_1_1dq_iterator_ace8e8bd2b7b25fbf09ba1b6ddef64e98}\label{classdeque_1_1dq_iterator_ace8e8bd2b7b25fbf09ba1b6ddef64e98}} 
+\index{deque$<$ elemType $>$::dqIterator@{deque$<$ elemType $>$::dqIterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!deque$<$ elemType $>$::dqIterator@{deque$<$ elemType $>$::dqIterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+bool \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdeque_1_1dq_iterator}{dq\+Iterator}} \&}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Inequality operator for deque iterator 
+\begin{DoxyParams}{Parameters}
+{\em d} & is deque iterator const reference \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdeque_1_1dq_iterator_a9f5ff14b4ed381c52545e4d04e59dd9f}\label{classdeque_1_1dq_iterator_a9f5ff14b4ed381c52545e4d04e59dd9f}} 
+\index{deque$<$ elemType $>$::dqIterator@{deque$<$ elemType $>$::dqIterator}!operator=@{operator=}}
+\index{operator=@{operator=}!deque$<$ elemType $>$::dqIterator@{deque$<$ elemType $>$::dqIterator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+\mbox{\hyperlink{classdeque_1_1dq_iterator}{dq\+Iterator}} \& \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Iterator\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdeque_1_1dq_iterator}{dq\+Iterator}} \&}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Equality copy operator for iterator 
+\begin{DoxyParams}{Parameters}
+{\em d} & is deque iterator const reference \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdeque_1_1dq_iterator_a22ca517e80f38f179bb85973682ca3d1}\label{classdeque_1_1dq_iterator_a22ca517e80f38f179bb85973682ca3d1}} 
+\index{deque$<$ elemType $>$::dqIterator@{deque$<$ elemType $>$::dqIterator}!operator==@{operator==}}
+\index{operator==@{operator==}!deque$<$ elemType $>$::dqIterator@{deque$<$ elemType $>$::dqIterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+bool \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Iterator\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdeque_1_1dq_iterator}{dq\+Iterator}} \&}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Equality operator for deque iterator 
+\begin{DoxyParams}{Parameters}
+{\em d} & is deque iterator const reference \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+deque.\+h\end{DoxyCompactItemize}

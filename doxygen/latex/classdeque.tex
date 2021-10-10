@@ -1,0 +1,383 @@
+\hypertarget{classdeque}{}\doxysection{deque\texorpdfstring{$<$}{<} elem\+Type \texorpdfstring{$>$}{>} Class Template Reference}
+\label{classdeque}\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+
+
+Deque @detailed Double linked list.  
+
+
+
+
+{\ttfamily \#include $<$deque.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdeque_1_1dq_iterator}{dq\+Iterator}}
+\begin{DoxyCompactList}\small\item\em Deque iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdeque_1_1dq_iterator}{dq\+Iterator}} \mbox{\hyperlink{classdeque_aaa278cee3a32e91111aca3f4cfd63b46}{dq\+Head}} () const
+\item 
+\mbox{\hyperlink{classdeque_1_1dq_iterator}{dq\+Iterator}} \mbox{\hyperlink{classdeque_a6804e715dea40484d200fd040b177b64}{dq\+Tail}} () const
+\item 
+\mbox{\hyperlink{classdeque_a97685f57fe815032cc48dbbc72f42829}{deque}} ()
+\item 
+\mbox{\hyperlink{classdeque_a7effb32f9c3deae202e08597bea4ab77}{deque}} (std\+::initializer\+\_\+list$<$ elem\+Type $>$ list\+Value)
+\item 
+\mbox{\hyperlink{classdeque_a5e5c7f0aa75c12137783668d6a49a704}{deque}} (const \mbox{\hyperlink{classdeque}{deque}} \&d)
+\item 
+\mbox{\hyperlink{classdeque_ab709f0f3f14577c250fe61713001f13f}{deque}} (\mbox{\hyperlink{classdeque}{deque}} \&\&d)
+\item 
+bool \mbox{\hyperlink{classdeque_a73c73a655d1464d4bda62f173a9cb2f0}{dq\+Empty}} () const
+\item 
+void \mbox{\hyperlink{classdeque_a48adb54acf5a595aa1730ddf30d7cc9b}{dq\+Push\+Head}} (const elem\+Type \&value)
+\item 
+void \mbox{\hyperlink{classdeque_aca519629fcb80f24f06e64554cfd43ae}{dq\+Push\+Head}} (elem\+Type \&\&value)
+\item 
+void \mbox{\hyperlink{classdeque_abe2d5380e5a9f1c78f06828deaba156c}{dq\+Push\+Tail}} (const elem\+Type \&value)
+\item 
+void \mbox{\hyperlink{classdeque_ae5d1fb1682c946711375536293fe1243}{dq\+Push\+Tail}} (elem\+Type \&\&value)
+\item 
+elem\+Type \& \mbox{\hyperlink{classdeque_afc3a82adb1fb39678ed4880c8100b5c3}{dq\+Pop\+Head}} ()
+\item 
+void \mbox{\hyperlink{classdeque_a21628c92088eaf84caf8475909e5003f}{dq\+Delete\+Head}} ()
+\item 
+elem\+Type \& \mbox{\hyperlink{classdeque_a66cbcf4e8a5c4e6ccefbcf4e5359e073}{dq\+Pop\+Tail}} ()
+\item 
+void \mbox{\hyperlink{classdeque_a57a1534936d4a7f72b4d62a53f774372}{dq\+Delete\+Tail}} ()
+\item 
+void \mbox{\hyperlink{classdeque_a0bb713b902155a55163356a4ea3ccd12}{dq\+Union}} (const \mbox{\hyperlink{classdeque}{deque}} \&d)
+\item 
+void \mbox{\hyperlink{classdeque_a2cbb7d9c9d34a69d4764936a02269e36}{dq\+Union}} (\mbox{\hyperlink{classdeque}{deque}} \&\&d)
+\item 
+\mbox{\hyperlink{classdeque}{deque}} \& \mbox{\hyperlink{classdeque_a6c1861cac88385a94805b04b7f0c9c54}{operator=}} (const \mbox{\hyperlink{classdeque}{deque}} \&d)
+\item 
+\mbox{\hyperlink{classdeque}{deque}} \& \mbox{\hyperlink{classdeque_ab9bb478cb50debf99cc9eeb7cfec4a54}{operator=}} (\mbox{\hyperlink{classdeque}{deque}} \&\&d)
+\item 
+\mbox{\hyperlink{classdeque}{deque}} \& \mbox{\hyperlink{classdeque_a4a494fa3d1615cb85b23dd5b7d3bc387}{operator+}} (const elem\+Type \&value)
+\item 
+\mbox{\hyperlink{classdeque}{deque}} \& \mbox{\hyperlink{classdeque_a028d22ada61397a251ea648749700d7b}{operator+}} (elem\+Type \&\&value)
+\item 
+\mbox{\hyperlink{classdeque}{deque}} \& \mbox{\hyperlink{classdeque_acf55f17d407643eb15e3348499a16e28}{operator+}} (const \mbox{\hyperlink{classdeque}{deque}} \&d)
+\item 
+\mbox{\hyperlink{classdeque}{deque}} \& \mbox{\hyperlink{classdeque_ad6279bd12fbdbaa51f41c1b17436f479}{operator+}} (\mbox{\hyperlink{classdeque}{deque}} \&\&d)
+\item 
+void \mbox{\hyperlink{classdeque_a8702d4ce5d09dcdffd8ea694bc9d4b80}{dq\+Clear}} ()
+\item 
+\mbox{\hyperlink{classdeque_a1204d9e410eea462e9582f61a0dfbc32}{$\sim$deque}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class elem\+Type$>$\newline
+class deque$<$ elem\+Type $>$}
+Deque @detailed Double linked list. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em elem\+Type} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdeque_a97685f57fe815032cc48dbbc72f42829}\label{classdeque_a97685f57fe815032cc48dbbc72f42829}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!deque@{deque}}
+\index{deque@{deque}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{deque()}{deque()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+\mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::\mbox{\hyperlink{classdeque}{deque}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default deque constructor \mbox{\Hypertarget{classdeque_a7effb32f9c3deae202e08597bea4ab77}\label{classdeque_a7effb32f9c3deae202e08597bea4ab77}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!deque@{deque}}
+\index{deque@{deque}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{deque()}{deque()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+\mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::\mbox{\hyperlink{classdeque}{deque}} (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ elem\+Type $>$}]{list\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Deque constructor with initialiezer list 
+\begin{DoxyParams}{Parameters}
+{\em list\+Value} & is list of \textquotesingle{}elem\+Type\textquotesingle{} values \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdeque_a5e5c7f0aa75c12137783668d6a49a704}\label{classdeque_a5e5c7f0aa75c12137783668d6a49a704}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!deque@{deque}}
+\index{deque@{deque}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{deque()}{deque()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+\mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::\mbox{\hyperlink{classdeque}{deque}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$ \&}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Copy deque constructor 
+\begin{DoxyParams}{Parameters}
+{\em d} & is deque const reference to copy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdeque_ab709f0f3f14577c250fe61713001f13f}\label{classdeque_ab709f0f3f14577c250fe61713001f13f}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!deque@{deque}}
+\index{deque@{deque}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{deque()}{deque()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+\mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::\mbox{\hyperlink{classdeque}{deque}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$ \&\&}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Move deque constructor 
+\begin{DoxyParams}{Parameters}
+{\em d} & is deque conns reference \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdeque_a1204d9e410eea462e9582f61a0dfbc32}\label{classdeque_a1204d9e410eea462e9582f61a0dfbc32}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!````~deque@{$\sim$deque}}
+\index{````~deque@{$\sim$deque}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$deque()}{~deque()}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+\mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::$\sim$\mbox{\hyperlink{classdeque}{deque}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Deque destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdeque_a8702d4ce5d09dcdffd8ea694bc9d4b80}\label{classdeque_a8702d4ce5d09dcdffd8ea694bc9d4b80}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!dqClear@{dqClear}}
+\index{dqClear@{dqClear}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{dqClear()}{dqClear()}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+void \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Clear deque \mbox{\Hypertarget{classdeque_a21628c92088eaf84caf8475909e5003f}\label{classdeque_a21628c92088eaf84caf8475909e5003f}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!dqDeleteHead@{dqDeleteHead}}
+\index{dqDeleteHead@{dqDeleteHead}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{dqDeleteHead()}{dqDeleteHead()}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+void \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Delete\+Head (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Delete element to deque head \mbox{\Hypertarget{classdeque_a57a1534936d4a7f72b4d62a53f774372}\label{classdeque_a57a1534936d4a7f72b4d62a53f774372}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!dqDeleteTail@{dqDeleteTail}}
+\index{dqDeleteTail@{dqDeleteTail}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{dqDeleteTail()}{dqDeleteTail()}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+void \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Delete\+Tail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Delete deque tail \mbox{\Hypertarget{classdeque_a73c73a655d1464d4bda62f173a9cb2f0}\label{classdeque_a73c73a655d1464d4bda62f173a9cb2f0}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!dqEmpty@{dqEmpty}}
+\index{dqEmpty@{dqEmpty}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{dqEmpty()}{dqEmpty()}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+bool \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Empty deque check \begin{DoxyReturn}{Returns}
+true if deque is empty, else false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdeque_aaa278cee3a32e91111aca3f4cfd63b46}\label{classdeque_aaa278cee3a32e91111aca3f4cfd63b46}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!dqHead@{dqHead}}
+\index{dqHead@{dqHead}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{dqHead()}{dqHead()}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+\mbox{\hyperlink{classdeque_1_1dq_iterator}{dq\+Iterator}} \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Head (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get deque head \begin{DoxyReturn}{Returns}
+deque head point iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdeque_afc3a82adb1fb39678ed4880c8100b5c3}\label{classdeque_afc3a82adb1fb39678ed4880c8100b5c3}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!dqPopHead@{dqPopHead}}
+\index{dqPopHead@{dqPopHead}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{dqPopHead()}{dqPopHead()}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+elem\+Type \& \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Pop\+Head (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Pop element to deque head \begin{DoxyWarning}{Warning}
+Empty deque 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+value of head element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdeque_a66cbcf4e8a5c4e6ccefbcf4e5359e073}\label{classdeque_a66cbcf4e8a5c4e6ccefbcf4e5359e073}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!dqPopTail@{dqPopTail}}
+\index{dqPopTail@{dqPopTail}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{dqPopTail()}{dqPopTail()}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+elem\+Type \& \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Pop\+Tail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Pop element to deque tail \begin{DoxyWarning}{Warning}
+Empty deque 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & of tail element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdeque_a48adb54acf5a595aa1730ddf30d7cc9b}\label{classdeque_a48adb54acf5a595aa1730ddf30d7cc9b}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!dqPushHead@{dqPushHead}}
+\index{dqPushHead@{dqPushHead}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{dqPushHead()}{dqPushHead()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+void \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Push\+Head (\begin{DoxyParamCaption}\item[{const elem\+Type \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Push element to deque head without move semantic \begin{DoxyWarning}{Warning}
+Error in memory when add new element 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & is const reference to value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdeque_aca519629fcb80f24f06e64554cfd43ae}\label{classdeque_aca519629fcb80f24f06e64554cfd43ae}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!dqPushHead@{dqPushHead}}
+\index{dqPushHead@{dqPushHead}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{dqPushHead()}{dqPushHead()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+void \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Push\+Head (\begin{DoxyParamCaption}\item[{elem\+Type \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Push element to deque head with move semantic \begin{DoxyWarning}{Warning}
+Error in memory when add new element 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & is r\+Value reference to value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdeque_abe2d5380e5a9f1c78f06828deaba156c}\label{classdeque_abe2d5380e5a9f1c78f06828deaba156c}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!dqPushTail@{dqPushTail}}
+\index{dqPushTail@{dqPushTail}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{dqPushTail()}{dqPushTail()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+void \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Push\+Tail (\begin{DoxyParamCaption}\item[{const elem\+Type \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Push element to deque tail without move semantic \begin{DoxyWarning}{Warning}
+Error in memory when add new element 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & is const reference to value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdeque_ae5d1fb1682c946711375536293fe1243}\label{classdeque_ae5d1fb1682c946711375536293fe1243}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!dqPushTail@{dqPushTail}}
+\index{dqPushTail@{dqPushTail}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{dqPushTail()}{dqPushTail()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+void \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Push\+Tail (\begin{DoxyParamCaption}\item[{elem\+Type \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Push element to deque tail with move semantic \begin{DoxyWarning}{Warning}
+Error in memory when add new element 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & is r\+Value reference to value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdeque_a6804e715dea40484d200fd040b177b64}\label{classdeque_a6804e715dea40484d200fd040b177b64}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!dqTail@{dqTail}}
+\index{dqTail@{dqTail}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{dqTail()}{dqTail()}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+\mbox{\hyperlink{classdeque_1_1dq_iterator}{dq\+Iterator}} \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Tail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get element after deque tail \begin{DoxyReturn}{Returns}
+deque tail point iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdeque_a0bb713b902155a55163356a4ea3ccd12}\label{classdeque_a0bb713b902155a55163356a4ea3ccd12}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!dqUnion@{dqUnion}}
+\index{dqUnion@{dqUnion}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{dqUnion()}{dqUnion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+void \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Union (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$ \&}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Union two deque 
+\begin{DoxyParams}{Parameters}
+{\em d} & is deque reference deque to union \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdeque_a2cbb7d9c9d34a69d4764936a02269e36}\label{classdeque_a2cbb7d9c9d34a69d4764936a02269e36}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!dqUnion@{dqUnion}}
+\index{dqUnion@{dqUnion}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{dqUnion()}{dqUnion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+void \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::dq\+Union (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$ \&\&}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Union two deque 
+\begin{DoxyParams}{Parameters}
+{\em d} & is deque r\+Value reference deque to union \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdeque_acf55f17d407643eb15e3348499a16e28}\label{classdeque_acf55f17d407643eb15e3348499a16e28}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+\mbox{\hyperlink{classdeque}{deque}} \& \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$ \&}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Operator union two deque 
+\begin{DoxyParams}{Parameters}
+{\em d} & is deque const reference deque to union \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdeque_a4a494fa3d1615cb85b23dd5b7d3bc387}\label{classdeque_a4a494fa3d1615cb85b23dd5b7d3bc387}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+\mbox{\hyperlink{classdeque}{deque}} \& \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const elem\+Type \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Operator push element to deque head 
+\begin{DoxyParams}{Parameters}
+{\em value} & is const reference to value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+deque with new element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdeque_ad6279bd12fbdbaa51f41c1b17436f479}\label{classdeque_ad6279bd12fbdbaa51f41c1b17436f479}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+\mbox{\hyperlink{classdeque}{deque}} \& \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$ \&\&}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Operator union two deque 
+\begin{DoxyParams}{Parameters}
+{\em d} & is deque r\+Value reference deque to union \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdeque_a028d22ada61397a251ea648749700d7b}\label{classdeque_a028d22ada61397a251ea648749700d7b}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+\mbox{\hyperlink{classdeque}{deque}} \& \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::operator+ (\begin{DoxyParamCaption}\item[{elem\+Type \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Operator push element to deque head 
+\begin{DoxyParams}{Parameters}
+{\em value} & is r\+Value reference to value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+deque with new element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdeque_a6c1861cac88385a94805b04b7f0c9c54}\label{classdeque_a6c1861cac88385a94805b04b7f0c9c54}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+\mbox{\hyperlink{classdeque}{deque}} \& \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$ \&}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Equality copy operator 
+\begin{DoxyParams}{Parameters}
+{\em d} & is deque const reference to copy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdeque_ab9bb478cb50debf99cc9eeb7cfec4a54}\label{classdeque_ab9bb478cb50debf99cc9eeb7cfec4a54}} 
+\index{deque$<$ elemType $>$@{deque$<$ elemType $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!deque$<$ elemType $>$@{deque$<$ elemType $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class elem\+Type $>$ \\
+\mbox{\hyperlink{classdeque}{deque}} \& \mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdeque}{deque}}$<$ elem\+Type $>$ \&\&}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Equality move operator 
+\begin{DoxyParams}{Parameters}
+{\em d} & is deque r\+Vlaue reference to copy \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+deque.\+h\end{DoxyCompactItemize}

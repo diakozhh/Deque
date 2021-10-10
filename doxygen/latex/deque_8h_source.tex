@@ -1,0 +1,312 @@
+\hypertarget{deque_8h_source}{}\doxysection{deque.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <utility>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{11 \textcolor{keyword}{template}<\textcolor{keyword}{class} elemType>\textcolor{comment}{//}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{classdeque}{deque}} \{}
+\DoxyCodeLine{14 \textcolor{keyword}{private}:}
+\DoxyCodeLine{18     \textcolor{keyword}{struct }elem \{}
+\DoxyCodeLine{19         elemType value;}
+\DoxyCodeLine{20         elem *prev;}
+\DoxyCodeLine{21         elem *next;}
+\DoxyCodeLine{22     \};}
+\DoxyCodeLine{23     elem *head;}
+\DoxyCodeLine{24     elem *tail;}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{public}:}
+\DoxyCodeLine{30     \textcolor{keyword}{class }\mbox{\hyperlink{classdeque_1_1dq_iterator}{dqIterator}} \{}
+\DoxyCodeLine{31     \textcolor{keyword}{private}:}
+\DoxyCodeLine{32         elem* element;}
+\DoxyCodeLine{33     \textcolor{keyword}{public}:}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{39         \mbox{\hyperlink{classdeque_1_1dq_iterator_a1a1e7199ba978ac05147c1e85c3a6542}{dqIterator}}(\textcolor{keyword}{const} \mbox{\hyperlink{classdeque}{deque}}\& d) : element(d-\/>head) \{\};}
+\DoxyCodeLine{44         \mbox{\hyperlink{classdeque_1_1dq_iterator_a110f5e34559cf1cb3ac6ff72d14111af}{dqIterator}}(elem* e) : element(e) \{\};}
+\DoxyCodeLine{45         }
+\DoxyCodeLine{50         \textcolor{keywordtype}{void} \mbox{\hyperlink{classdeque_1_1dq_iterator_abdcbb1f945d3c4fe012808d04d169a07}{dqNext}}() \{}
+\DoxyCodeLine{51             \textcolor{keywordflow}{if}(element == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{52                 \textcolor{keywordflow}{throw} std::exception(\textcolor{stringliteral}{"{}Error iterator"{}});}
+\DoxyCodeLine{53             element = element-\/>next;}
+\DoxyCodeLine{54         \}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{60         \textcolor{keywordtype}{void} \mbox{\hyperlink{classdeque_1_1dq_iterator_aea0b4e1838f41bdcb9c43a108bcecac8}{dqPrev}}() \{}
+\DoxyCodeLine{61             \textcolor{keywordflow}{if} (element == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{62                 \textcolor{keywordflow}{throw} std::exception(\textcolor{stringliteral}{"{}Error iterator"{}});}
+\DoxyCodeLine{63             element = element-\/>prev;}
+\DoxyCodeLine{64         \}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{70         \mbox{\hyperlink{classdeque_1_1dq_iterator}{dqIterator}}\& \mbox{\hyperlink{classdeque_1_1dq_iterator_a9f5ff14b4ed381c52545e4d04e59dd9f}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classdeque_1_1dq_iterator}{dqIterator}}\& d) \{}
+\DoxyCodeLine{71             element = d-\/>element;}
+\DoxyCodeLine{72             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{73         \}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{79         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classdeque_1_1dq_iterator_a22ca517e80f38f179bb85973682ca3d1}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classdeque_1_1dq_iterator}{dqIterator}}\& d) \{}
+\DoxyCodeLine{80             \textcolor{keywordflow}{if}(element == d.element)}
+\DoxyCodeLine{81                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{82             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{83         \}}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{89         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classdeque_1_1dq_iterator_ace8e8bd2b7b25fbf09ba1b6ddef64e98}{operator!=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classdeque_1_1dq_iterator}{dqIterator}}\& d) \{}
+\DoxyCodeLine{90             \textcolor{keywordflow}{if} (element != d.element)}
+\DoxyCodeLine{91                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{92             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{93         \}}
+\DoxyCodeLine{94         }
+\DoxyCodeLine{99         elemType\& \mbox{\hyperlink{classdeque_1_1dq_iterator_a1739e506c14b079ab5abe91afa804f48}{getElem}}() \{}
+\DoxyCodeLine{100             \textcolor{keywordflow}{if}(element == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{101                 \textcolor{keywordflow}{throw} std::exception(\textcolor{stringliteral}{"{}Null iterator"{}});}
+\DoxyCodeLine{102             \textcolor{keywordflow}{return} element-\/>value;}
+\DoxyCodeLine{103         \}}
+\DoxyCodeLine{104     \};}
+\DoxyCodeLine{105     }
+\DoxyCodeLine{110     \mbox{\hyperlink{classdeque_1_1dq_iterator}{dqIterator}} \mbox{\hyperlink{classdeque_aaa278cee3a32e91111aca3f4cfd63b46}{dqHead}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{111         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdeque_1_1dq_iterator}{dqIterator}}(head);}
+\DoxyCodeLine{112     \}}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{118     \mbox{\hyperlink{classdeque_1_1dq_iterator}{dqIterator}} \mbox{\hyperlink{classdeque_a6804e715dea40484d200fd040b177b64}{dqTail}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{119         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdeque_1_1dq_iterator}{dqIterator}}(\textcolor{keyword}{nullptr});}
+\DoxyCodeLine{120     \}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{125     \mbox{\hyperlink{classdeque_a97685f57fe815032cc48dbbc72f42829}{deque}}() : head(nullptr), tail(nullptr) \{\};}
+\DoxyCodeLine{126     }
+\DoxyCodeLine{131     \mbox{\hyperlink{classdeque_a7effb32f9c3deae202e08597bea4ab77}{deque}}(std::initializer\_list<elemType> listValue) : head(nullptr), tail(nullptr) \{}
+\DoxyCodeLine{132         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& value : listValue)}
+\DoxyCodeLine{133             \mbox{\hyperlink{classdeque_abe2d5380e5a9f1c78f06828deaba156c}{dqPushTail}}(value);}
+\DoxyCodeLine{134     \}}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{140     \mbox{\hyperlink{classdeque_a5e5c7f0aa75c12137783668d6a49a704}{deque}}(\textcolor{keyword}{const} \mbox{\hyperlink{classdeque}{deque}}\& d) : head(nullptr), tail(nullptr) \{}
+\DoxyCodeLine{141         \textcolor{keywordflow}{for}( \mbox{\hyperlink{classdeque_1_1dq_iterator}{dqIterator}} dqI = d.\mbox{\hyperlink{classdeque_aaa278cee3a32e91111aca3f4cfd63b46}{dqHead}}(); dqI != d.\mbox{\hyperlink{classdeque_a6804e715dea40484d200fd040b177b64}{dqTail}}(); dqI.\mbox{\hyperlink{classdeque_1_1dq_iterator_abdcbb1f945d3c4fe012808d04d169a07}{dqNext}}())}
+\DoxyCodeLine{142             \mbox{\hyperlink{classdeque_abe2d5380e5a9f1c78f06828deaba156c}{dqPushTail}}(dqI.getElem());}
+\DoxyCodeLine{143     \}}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{149     \mbox{\hyperlink{classdeque_ab709f0f3f14577c250fe61713001f13f}{deque}}(\mbox{\hyperlink{classdeque}{deque}}\&\& d) : head(nullptr), tail(nullptr) \{}
+\DoxyCodeLine{150         head = d.head;}
+\DoxyCodeLine{151         tail = d.tail;}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153         d.head = d.tail = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{154     \}}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{160     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classdeque_a73c73a655d1464d4bda62f173a9cb2f0}{dqEmpty}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{161         \textcolor{keywordflow}{if}(head == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{162             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{163         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{164     \}}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166 }
+\DoxyCodeLine{172     \textcolor{keywordtype}{void} \mbox{\hyperlink{classdeque_a48adb54acf5a595aa1730ddf30d7cc9b}{dqPushHead}}(\textcolor{keyword}{const} elemType\& value) \{}
+\DoxyCodeLine{173         elem* newElem = \textcolor{keyword}{new} elem;}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{175         \textcolor{keywordflow}{if}(!newElem)}
+\DoxyCodeLine{176             \textcolor{keywordflow}{throw} std::exception(\textcolor{stringliteral}{"{}Error in memory"{}});}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178         newElem-\/>prev = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{179         newElem-\/>value = value;}
+\DoxyCodeLine{180         newElem-\/>net = head;}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182         \textcolor{keywordflow}{if}(head)}
+\DoxyCodeLine{183             head-\/>prev = newElem;}
+\DoxyCodeLine{184         head = newElem;}
+\DoxyCodeLine{185         \textcolor{keywordflow}{if}(!tail)}
+\DoxyCodeLine{186             tail = newElem;}
+\DoxyCodeLine{187     \}}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{194     \textcolor{keywordtype}{void} \mbox{\hyperlink{classdeque_aca519629fcb80f24f06e64554cfd43ae}{dqPushHead}}(elemType\&\& value) \{}
+\DoxyCodeLine{195         elem* newElem = \textcolor{keyword}{new} elem;}
+\DoxyCodeLine{196         \textcolor{keywordflow}{if} (!newElem)}
+\DoxyCodeLine{197             \textcolor{keywordflow}{throw} std::exception(\textcolor{stringliteral}{"{}Error in memory"{}});}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199         newElem-\/>prev = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{200         newElem-\/>value = std::move(value);}
+\DoxyCodeLine{201         newElem-\/>next = head;}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203         \textcolor{keywordflow}{if} (head)}
+\DoxyCodeLine{204             head-\/>prev = newElem;}
+\DoxyCodeLine{205         head = newElem;}
+\DoxyCodeLine{206 }
+\DoxyCodeLine{207         \textcolor{keywordflow}{if} (!tail)}
+\DoxyCodeLine{208             tail = newElem;}
+\DoxyCodeLine{209     \}}
+\DoxyCodeLine{210     }
+\DoxyCodeLine{216     \textcolor{keywordtype}{void} \mbox{\hyperlink{classdeque_abe2d5380e5a9f1c78f06828deaba156c}{dqPushTail}}(\textcolor{keyword}{const} elemType\& value) \{}
+\DoxyCodeLine{217         elem* newElem = \textcolor{keyword}{new} elem;}
+\DoxyCodeLine{218         \textcolor{keywordflow}{if} (!newElem)}
+\DoxyCodeLine{219             \textcolor{keywordflow}{throw} std::exception(\textcolor{stringliteral}{"{}Error in memory"{}});}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{221         newElem-\/>next = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{222         newElem-\/>value = value;}
+\DoxyCodeLine{223         newElem-\/>prev = tail;}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{225         \textcolor{keywordflow}{if}(tail)}
+\DoxyCodeLine{226             tail-\/>next = newElem;}
+\DoxyCodeLine{227         tail = newElem;}
+\DoxyCodeLine{228 }
+\DoxyCodeLine{229         \textcolor{keywordflow}{if}(!head)}
+\DoxyCodeLine{230             head = newElem;}
+\DoxyCodeLine{231     \}}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{238     \textcolor{keywordtype}{void} \mbox{\hyperlink{classdeque_ae5d1fb1682c946711375536293fe1243}{dqPushTail}}(elemType\&\& value) \{}
+\DoxyCodeLine{239         elem* newElem = \textcolor{keyword}{new} elem;}
+\DoxyCodeLine{240         \textcolor{keywordflow}{if} (!newElem)}
+\DoxyCodeLine{241             \textcolor{keywordflow}{throw} std::exception(\textcolor{stringliteral}{"{}Error in memory"{}});}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{243         newElem-\/>next = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{244         newElem-\/>value = std::move(value);}
+\DoxyCodeLine{245         newElem-\/>prev = tail;}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{247         \textcolor{keywordflow}{if} (tail)}
+\DoxyCodeLine{248             tail-\/>next = newElem;}
+\DoxyCodeLine{249         tail = newElem;}
+\DoxyCodeLine{250 }
+\DoxyCodeLine{251         \textcolor{keywordflow}{if} (!head)}
+\DoxyCodeLine{252             head = newElem;}
+\DoxyCodeLine{253     \}}
+\DoxyCodeLine{254     }
+\DoxyCodeLine{260     elemType\& \mbox{\hyperlink{classdeque_afc3a82adb1fb39678ed4880c8100b5c3}{dqPopHead}}() \{}
+\DoxyCodeLine{261         \textcolor{keywordflow}{if} (!head)}
+\DoxyCodeLine{262             \textcolor{keywordflow}{throw} std::exception(\textcolor{stringliteral}{"{}Empty deque"{}});}
+\DoxyCodeLine{263         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{264             \textcolor{keywordflow}{return} head-\/>value;}
+\DoxyCodeLine{265     \}}
+\DoxyCodeLine{266 }
+\DoxyCodeLine{270     \textcolor{keywordtype}{void} \mbox{\hyperlink{classdeque_a21628c92088eaf84caf8475909e5003f}{dqDeleteHead}}() \{}
+\DoxyCodeLine{271         \textcolor{keywordflow}{if}(!head \&\& !tail)}
+\DoxyCodeLine{272             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{273         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{274             elem* deleteElem = head;}
+\DoxyCodeLine{275             head = head-\/>next;}
+\DoxyCodeLine{276             \textcolor{keywordflow}{if}(!head)}
+\DoxyCodeLine{277                 tail = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{278             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{279                 head-\/>prev = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{280             \textcolor{keyword}{delete}(deleteElem);}
+\DoxyCodeLine{281         \}}
+\DoxyCodeLine{282     \}}
+\DoxyCodeLine{283 }
+\DoxyCodeLine{289     elemType\& \mbox{\hyperlink{classdeque_a66cbcf4e8a5c4e6ccefbcf4e5359e073}{dqPopTail}}() \{}
+\DoxyCodeLine{290         \textcolor{keywordflow}{if} (!tail)}
+\DoxyCodeLine{291             \textcolor{keywordflow}{throw} std::exception(\textcolor{stringliteral}{"{}Empty deque"{}});}
+\DoxyCodeLine{292         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{293             \textcolor{keywordflow}{return} tail-\/>value;}
+\DoxyCodeLine{294     \}}
+\DoxyCodeLine{295 }
+\DoxyCodeLine{299     \textcolor{keywordtype}{void} \mbox{\hyperlink{classdeque_a57a1534936d4a7f72b4d62a53f774372}{dqDeleteTail}}() \{}
+\DoxyCodeLine{300         \textcolor{keywordflow}{if}(!head \&\& !tail)}
+\DoxyCodeLine{301             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{302         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{303             elem* deleteElem = tail;}
+\DoxyCodeLine{304             tail = tail-\/>prev;}
+\DoxyCodeLine{305             \textcolor{keywordflow}{if}(!tail)}
+\DoxyCodeLine{306                 head = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{307             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{308                 tail-\/>next = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{309             \textcolor{keyword}{delete}(deleteElem);}
+\DoxyCodeLine{310         \}}
+\DoxyCodeLine{311     \}}
+\DoxyCodeLine{316     \textcolor{keywordtype}{void} \mbox{\hyperlink{classdeque_a0bb713b902155a55163356a4ea3ccd12}{dqUnion}}(\textcolor{keyword}{const} \mbox{\hyperlink{classdeque}{deque}}\& d) \{}
+\DoxyCodeLine{317         \textcolor{keywordflow}{if} (\&d == \textcolor{keyword}{this}) \{}
+\DoxyCodeLine{318             \mbox{\hyperlink{classdeque}{deque<elemType>}} newDeque(d);}
+\DoxyCodeLine{319             \textcolor{keywordflow}{for}(\mbox{\hyperlink{classdeque_1_1dq_iterator}{dqIterator}} dqI = newDeque.\mbox{\hyperlink{classdeque_aaa278cee3a32e91111aca3f4cfd63b46}{dqHead}}() ; dqI != newDeque.\mbox{\hyperlink{classdeque_a6804e715dea40484d200fd040b177b64}{dqTail}}(); dqI.\mbox{\hyperlink{classdeque_1_1dq_iterator_abdcbb1f945d3c4fe012808d04d169a07}{dqNext}}())}
+\DoxyCodeLine{320                 \mbox{\hyperlink{classdeque_abe2d5380e5a9f1c78f06828deaba156c}{dqPushTail}}(dqI.getElem());}
+\DoxyCodeLine{321             newDeque.\mbox{\hyperlink{classdeque_a8702d4ce5d09dcdffd8ea694bc9d4b80}{dqClear}}();}
+\DoxyCodeLine{322         \}}
+\DoxyCodeLine{323         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{324             \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdeque_1_1dq_iterator}{dqIterator}} dqI = d.\mbox{\hyperlink{classdeque_aaa278cee3a32e91111aca3f4cfd63b46}{dqHead}}(); dqI != d.\mbox{\hyperlink{classdeque_a6804e715dea40484d200fd040b177b64}{dqTail}}(); dqI.\mbox{\hyperlink{classdeque_1_1dq_iterator_abdcbb1f945d3c4fe012808d04d169a07}{dqNext}}())}
+\DoxyCodeLine{325                 \mbox{\hyperlink{classdeque_abe2d5380e5a9f1c78f06828deaba156c}{dqPushTail}}(dqI.getElem());}
+\DoxyCodeLine{326         \}}
+\DoxyCodeLine{327     \}}
+\DoxyCodeLine{328     }
+\DoxyCodeLine{333     \textcolor{keywordtype}{void} \mbox{\hyperlink{classdeque_a2cbb7d9c9d34a69d4764936a02269e36}{dqUnion}}(\mbox{\hyperlink{classdeque}{deque}}\&\& d) \{}
+\DoxyCodeLine{334         \textcolor{keywordflow}{if} (!d.head)}
+\DoxyCodeLine{335             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{336         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!head) \{}
+\DoxyCodeLine{337             head = d.head;}
+\DoxyCodeLine{338             tail = d.tail;}
+\DoxyCodeLine{339             d.head = d.tail = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{340         \}}
+\DoxyCodeLine{341         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{342             tail-\/>next = d.head;}
+\DoxyCodeLine{343             d.head-\/>prev = tail;}
+\DoxyCodeLine{344 }
+\DoxyCodeLine{345             tail = d.tail;}
+\DoxyCodeLine{346             d.head = d.tail = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{347         \}}
+\DoxyCodeLine{348     \}}
+\DoxyCodeLine{349 }
+\DoxyCodeLine{354     \mbox{\hyperlink{classdeque}{deque}}\& \mbox{\hyperlink{classdeque_a6c1861cac88385a94805b04b7f0c9c54}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classdeque}{deque}}\& d) \{}
+\DoxyCodeLine{355         \textcolor{keywordflow}{if} (\&d != \textcolor{keyword}{this}) \{}
+\DoxyCodeLine{356             \mbox{\hyperlink{classdeque_a8702d4ce5d09dcdffd8ea694bc9d4b80}{dqClear}}();}
+\DoxyCodeLine{357             head = tail = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{358             \textcolor{keywordflow}{for}(\mbox{\hyperlink{classdeque_1_1dq_iterator}{dqIterator}} dqI = d.\mbox{\hyperlink{classdeque_aaa278cee3a32e91111aca3f4cfd63b46}{dqHead}}(); dqI != d.\mbox{\hyperlink{classdeque_a6804e715dea40484d200fd040b177b64}{dqTail}}(); dqI.\mbox{\hyperlink{classdeque_1_1dq_iterator_abdcbb1f945d3c4fe012808d04d169a07}{dqNext}}())}
+\DoxyCodeLine{359                 \mbox{\hyperlink{classdeque_abe2d5380e5a9f1c78f06828deaba156c}{dqPushTail}}(dqI.getElem());}
+\DoxyCodeLine{360         \}}
+\DoxyCodeLine{361         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{362     \}}
+\DoxyCodeLine{363 }
+\DoxyCodeLine{368     \mbox{\hyperlink{classdeque}{deque}}\& \mbox{\hyperlink{classdeque_ab9bb478cb50debf99cc9eeb7cfec4a54}{operator=}}(\mbox{\hyperlink{classdeque}{deque}}\&\& d) \{}
+\DoxyCodeLine{369         \mbox{\hyperlink{classdeque_a8702d4ce5d09dcdffd8ea694bc9d4b80}{dqClear}}();}
+\DoxyCodeLine{370         head = tail = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{371 }
+\DoxyCodeLine{372         head = d.head;}
+\DoxyCodeLine{373         tail = d.tail;}
+\DoxyCodeLine{374         tail = d.tail;}
+\DoxyCodeLine{375 }
+\DoxyCodeLine{376         d.head = d.tail = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{377         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{378     \}}
+\DoxyCodeLine{379     }
+\DoxyCodeLine{385     \mbox{\hyperlink{classdeque}{deque}}\& \mbox{\hyperlink{classdeque_a4a494fa3d1615cb85b23dd5b7d3bc387}{operator+}}(\textcolor{keyword}{const} elemType\& value) \{}
+\DoxyCodeLine{386         \mbox{\hyperlink{classdeque_abe2d5380e5a9f1c78f06828deaba156c}{dqPushTail}}(value);}
+\DoxyCodeLine{387         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{388     \}}
+\DoxyCodeLine{389 }
+\DoxyCodeLine{395     \mbox{\hyperlink{classdeque}{deque}}\& \mbox{\hyperlink{classdeque_a028d22ada61397a251ea648749700d7b}{operator+}}(elemType\&\& value) \{}
+\DoxyCodeLine{396         \mbox{\hyperlink{classdeque_abe2d5380e5a9f1c78f06828deaba156c}{dqPushTail}}(value);}
+\DoxyCodeLine{397         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{398     \}}
+\DoxyCodeLine{403     \mbox{\hyperlink{classdeque}{deque}}\& \mbox{\hyperlink{classdeque_acf55f17d407643eb15e3348499a16e28}{operator+}}(\textcolor{keyword}{const} \mbox{\hyperlink{classdeque}{deque}}\& d) \{}
+\DoxyCodeLine{404         \textcolor{keywordflow}{if} (\&d == \textcolor{keyword}{this}) \{}
+\DoxyCodeLine{405             \mbox{\hyperlink{classdeque}{deque<elemType>}} newDeque(d);}
+\DoxyCodeLine{406             \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdeque_1_1dq_iterator}{dqIterator}} dqI = newDeque.\mbox{\hyperlink{classdeque_aaa278cee3a32e91111aca3f4cfd63b46}{dqHead}}(); dqI != newDeque.\mbox{\hyperlink{classdeque_a6804e715dea40484d200fd040b177b64}{dqTail}}(); dqI.\mbox{\hyperlink{classdeque_1_1dq_iterator_abdcbb1f945d3c4fe012808d04d169a07}{dqNext}}())}
+\DoxyCodeLine{407                 \mbox{\hyperlink{classdeque_abe2d5380e5a9f1c78f06828deaba156c}{dqPushTail}}(dqI.getElem());}
+\DoxyCodeLine{408             newDeque.\mbox{\hyperlink{classdeque_a8702d4ce5d09dcdffd8ea694bc9d4b80}{dqClear}}();}
+\DoxyCodeLine{409         \}}
+\DoxyCodeLine{410         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{411             \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdeque_1_1dq_iterator}{dqIterator}} dqI = d.\mbox{\hyperlink{classdeque_aaa278cee3a32e91111aca3f4cfd63b46}{dqHead}}(); dqI != d.\mbox{\hyperlink{classdeque_a6804e715dea40484d200fd040b177b64}{dqTail}}(); dqI.\mbox{\hyperlink{classdeque_1_1dq_iterator_abdcbb1f945d3c4fe012808d04d169a07}{dqNext}}())}
+\DoxyCodeLine{412                 \mbox{\hyperlink{classdeque_abe2d5380e5a9f1c78f06828deaba156c}{dqPushTail}}(dqI.getElem());}
+\DoxyCodeLine{413         \}}
+\DoxyCodeLine{414         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{415     \}}
+\DoxyCodeLine{416 }
+\DoxyCodeLine{421     \mbox{\hyperlink{classdeque}{deque}}\& \mbox{\hyperlink{classdeque_ad6279bd12fbdbaa51f41c1b17436f479}{operator+}}(\mbox{\hyperlink{classdeque}{deque}}\&\& d) \{}
+\DoxyCodeLine{422         \textcolor{keywordflow}{if} (!d.head)}
+\DoxyCodeLine{423             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{424         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!head) \{}
+\DoxyCodeLine{425             head = d.head;}
+\DoxyCodeLine{426             tail = d.tail;}
+\DoxyCodeLine{427             d.head = d.tail = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{428         \}}
+\DoxyCodeLine{429         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{430             tail-\/>next = d.head;}
+\DoxyCodeLine{431             d.head-\/>prev = tail;}
+\DoxyCodeLine{432 }
+\DoxyCodeLine{433             tail = d.tail;}
+\DoxyCodeLine{434 }
+\DoxyCodeLine{435             d.head = d.tail = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{436         \}}
+\DoxyCodeLine{437         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{438     \}}
+\DoxyCodeLine{439 }
+\DoxyCodeLine{443     \textcolor{keywordtype}{void} \mbox{\hyperlink{classdeque_a8702d4ce5d09dcdffd8ea694bc9d4b80}{dqClear}}() \{}
+\DoxyCodeLine{444         \textcolor{keywordflow}{while}(!\mbox{\hyperlink{classdeque_a73c73a655d1464d4bda62f173a9cb2f0}{dqEmpty}}())}
+\DoxyCodeLine{445             \mbox{\hyperlink{classdeque_a21628c92088eaf84caf8475909e5003f}{dqDeleteHead}}();}
+\DoxyCodeLine{446     \}}
+\DoxyCodeLine{450     \mbox{\hyperlink{classdeque_a1204d9e410eea462e9582f61a0dfbc32}{\string~deque}}() \{}
+\DoxyCodeLine{451         \mbox{\hyperlink{classdeque_a8702d4ce5d09dcdffd8ea694bc9d4b80}{dqClear}}();}
+\DoxyCodeLine{452     \}}
+\DoxyCodeLine{453 \};}
+
+\end{DoxyCode}
